@@ -42,7 +42,7 @@ public class Livro {
 
     @Override
     public String toString() {
-        return ("Titulo:\t" + this.titulo  + "\nEditora:\t" + this.editora + "\nData Lanc:\t" + this.dtLancamento);
+        return ("Titulo:\t" + this.titulo  + "\nEditora: " + this.editora + "\nData Lançamento: " + this.dtLancamento);
         // DaterTimeFormatter
     }
 
@@ -66,7 +66,7 @@ public class Livro {
 
         LocalDate novaData = LocalDate.parse(data, formatter);
 
-        System.out.println("Nova data = " + novaData.format(formatter));
+        // System.out.println("Nova data = " + novaData.format(formatter));
 
         // if (data.length() != 3) {
         //     System.out.println("Digite a data corretamente");

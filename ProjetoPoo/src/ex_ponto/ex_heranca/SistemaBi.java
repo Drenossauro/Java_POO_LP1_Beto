@@ -7,11 +7,13 @@ import java.util.Scanner;
 
 public class SistemaBi {
     private final static String[] opcoes = {
+            "\n\n",
             " -----------------------------------------------------------------",
             "|                  +++ Sistema biblioteca +++                     |",
             "|-----------------------------------------------------------------|",
             "|                      Escolha uma opção                          |",
             "|-----------------------------------------------------------------|",
+            "|                                                                 |",
             "| 1 - Cadastrar Livro                                             |",
             "| 2 - Cadastrar Funcionario                                       |",
             "| 3 - Cadastrar Estudante                                         |",
@@ -21,15 +23,15 @@ public class SistemaBi {
             "| 0 - Sair                                                        |",
             "|                                                                 |",
             " -----------------------------------------------------------------",
-
+            
     };
 
     private static List<Livro> livros = new ArrayList<Livro>();
     private static List<Funcionario> funcionarios = new ArrayList<Funcionario>();
     private static List<Estudante> estudantes = new ArrayList<Estudante>();
     private static List<Autor> autores = new ArrayList<Autor>();
-    private static List<Emprestimo> emprestimos = new ArrayList<Emprestimo>();
-    private static List<Emprestimo> devolucoes = new ArrayList<Emprestimo>();
+    // private static List<Emprestimo> emprestimos = new ArrayList<Emprestimo>();
+    // private static List<Emprestimo> devolucoes = new ArrayList<Emprestimo>();
 
     private static Scanner buffer = new Scanner(System.in);
 
@@ -37,7 +39,7 @@ public class SistemaBi {
         int op = 1;
         while (op != 0) {
             printMenu();
-            System.out.print("\n\n");
+            System.out.print("Digite Aqui: ");
             op = buffer.nextInt();
             escolha(op);
             System.in.read();// System("pause")
@@ -59,52 +61,58 @@ public class SistemaBi {
     
     private static void escolha(int op) {
         switch (op) {
-            // cadastrar Livro
+            // cadastrar Livro 
             case 1:
+                System.out.println("\n + Cadastrando Livro + \n");
                 Livro novoLivro = Livro.cadastrarLivro();
-                System.out.println("Livro cadastrado!\nResumo...\n");
+                System.out.println("\nLivro cadastrado!\n\nResumo...");
                 System.out.println(novoLivro.toString());
                 livros.add(novoLivro);
                 break;
 
             // cadastrar funcionario
             case 2:
+                System.out.println("\n + Cadastrando Funcionário + \n");
                 Funcionario novoFunc = Funcionario.cadastrarFunc();
-                System.out.println("Novo funcionário cadastrado!\n");
+                System.out.println("\nNovo funcionário cadastrado!\n\nResumo...");
                 System.out.println(novoFunc.toString());
                 funcionarios.add(novoFunc);
                 break;
 
             // cadastrar Estudante
             case 3:
+                System.out.println("\n + Cadastrando Estudante + \n");
                 Estudante novoEstudante = Estudante.cadastrarEstudante();
-                System.out.println("Novo estudante cadastrado!\n");
+                System.out.println("Novo estudante cadastrado!\n\nResumo...");
                 System.out.println(novoEstudante.toString());
                 estudantes.add(novoEstudante);
                 break;
 
             // cadastrar Autor
             case 4:
+                System.out.println("\n + Cadastrando Autor + \n");
                 Autor novoAutor = Autor.cadastrarAutor();
-                System.out.println("Novo autor cadastrado!\n");
+                System.out.println("Novo autor cadastrado!\n\nResumo...");
                 System.out.println(novoAutor.toString());
                 autores.add(novoAutor);
                 break;
 
             // Realizar emprestimo
-            case 5:
-                Emprestimo novoEmprestimoRealizado = Emprestimo.realizaEmprestimo();
-                System.out.println("Emprestimo realizado!\n");
-                System.out.println(novoEmprestimoRealizado.toString());
-                emprestimos.add(novoEmprestimoRealizado);
-                break;
+            // case 5:
+            //     System.out.println("\n + Realizando Emprestimo + \n");
+            //     Emprestimo novoEmprestimoRealizado = Emprestimo.realizaEmprestimo();
+            //     System.out.println("Emprestimo realizado!\n\nResumo...");
+            //     System.out.println(novoEmprestimoRealizado.toString());
+            //     emprestimos.add(novoEmprestimoRealizado);
+            //     break;
 
-            case 6:
-                Emprestimo novoEmprestimoRecebido = Emprestimo.receberDevolucao();
-                System.out.println("Emprestimo recebido!\n");
-                System.out.println(novoEmprestimoRecebido.toString());
-                devolucoes.add(novoEmprestimoRecebido);
-                break;
+            // case 6:
+            //     System.out.println("\n + Realizando Devolição + \n");
+            //     Emprestimo novoEmprestimoRecebido = Emprestimo.receberDevolucao();
+            //     System.out.println("Emprestimo recebido!\n\nResumo...");
+            //     System.out.println(novoEmprestimoRecebido.toString());
+            //     devolucoes.add(novoEmprestimoRecebido);
+            //     break;
 
             case 0:
                 System.out.println("\nAté mais usuário\n");
@@ -112,6 +120,7 @@ public class SistemaBi {
 
             default:
                 System.out.println("Saindo da função escolha");
+                break;
 
         }
     }
