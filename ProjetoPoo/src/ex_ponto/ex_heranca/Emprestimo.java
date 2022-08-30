@@ -63,7 +63,7 @@
 //         this.dtDevolucao = dtDevolucao;
 //     }
 
-//     @Override
+//     @Override sob escrita
 //     public String toString() {
 //         return ("Estudante:\t" + this.estudante + "\nFuncionario:\t" + this.funcionario + "\nLivro: \t" + this.livro
 //                 + "\n Data do emprestimo: \t" + this.dtEmprestimo + "\nData da devolução: \t" + this.dtDevolucao);
