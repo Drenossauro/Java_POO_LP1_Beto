@@ -44,7 +44,9 @@ public class Autor extends Pessoa {
     }
 
     public static Autor cadastrarAutor() {
+
         Scanner in = new Scanner(System.in);
+        
         System.out.print("Digite o nome do autor: ");
         String nome = in.next();
         if (nome.length() < 4){ 
@@ -53,8 +55,8 @@ public class Autor extends Pessoa {
         }
 
         Autor novoAutor = new Autor(nome);
-        System.out.print("Digite o curso do Estudante: ");
-        novoAutor.setNome(in.next());
+        System.out.print("Digite a formação do autor: ");
+        novoAutor.setFormacao(in.next());
 
         System.out.print("Digite a data de nascimento do autor (dd/mm/yyyy): ");
         String data = in.next();

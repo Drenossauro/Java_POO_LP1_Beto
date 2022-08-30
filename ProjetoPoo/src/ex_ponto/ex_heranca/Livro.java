@@ -5,7 +5,7 @@ import java.time.format.DateTimeFormatter;
 import java.time.LocalDate;
 import java.util.Scanner;
 
-public class Livro {
+public class Livro{
     private String titulo;
     private String editora;
     private LocalDate dtLancamento;
@@ -48,24 +48,26 @@ public class Livro {
 
     public static Livro cadastrarLivro() {
         Scanner in = new Scanner(System.in);
+        
+        //titulo
         System.out.print("Digite o titulo do livro: ");
         String titulo = in.next();
         if (titulo.length() < 2) {
             System.out.println("O titulo deve ter pelo menos 2 catacteres!");
             return null;
         }
-
         Livro novoLivro = new Livro(titulo);
+
+        //editora
         System.out.print("Digite a editora do livro: ");
         novoLivro.setEditora(in.next());
 
+        //data
         System.out.print("Digite a data de lançamento (dd/mm/yyyy): ");
         String data = in.next();
-        
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-
         LocalDate novaData = LocalDate.parse(data, formatter);
-
+        
         // System.out.println("Nova data = " + novaData.format(formatter));
 
         // if (data.length() != 3) {

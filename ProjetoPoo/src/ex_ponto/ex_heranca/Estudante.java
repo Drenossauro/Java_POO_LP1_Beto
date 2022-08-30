@@ -1,7 +1,7 @@
 package ProjetoPoo.src.ex_ponto.ex_heranca;
 
-import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.time.LocalDate;
 import java.util.Scanner;
 
 
@@ -47,27 +47,29 @@ public class Estudante extends Pessoa {
 
     public static Estudante cadastrarEstudante() {
         Scanner in = new Scanner(System.in);
+        
+        //ra
         System.out.print("Digite o RA do estudante: ");
         String ra = in.next();
         if (ra.length() < 6){ 
             System.out.println("O RA deve ter pelo menos 6 caracteres!");
             return null;
         }
-
         Estudante novoEstudante = new Estudante(ra);
-        System.out.print("Digite o curso do Estudante: ");
-        novoEstudante.setRa(in.next());
 
+        //curso
+        System.out.print("Digite o curso do Estudante: ");
+        novoEstudante.setCurso(in.next());
+
+        //data 
         System.out.print("Digite a data de Inicio do curso (dd/mm/yyyy): ");
         String data = in.next();
-
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/mm/yyyy");
-
         LocalDate novaData = LocalDate.parse(data, formatter);
-
-        System.out.println("Nova data = " + novaData.format(formatter));
-
+        // System.out.println("Nova data = " + novaData.format(formatter));
         novoEstudante.setDtInicio(novaData);
+
+
         return novoEstudante;
 
     }

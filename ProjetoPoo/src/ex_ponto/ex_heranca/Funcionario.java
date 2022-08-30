@@ -42,32 +42,35 @@ public class Funcionario extends Pessoa {
 
     @Override
     public String toString() {
-        return ("Cargo: \t" + this.cargo + "\nMatrícula: \t" + this.matricula + "\nData de Admissão: \t" + this.dtAdmissao );
+        return ("Matrícula: \t" + this.matricula + "\nCargo: \t" + this.cargo + "\nData de Admissão: \t" + this.dtAdmissao );
     }
 
     public static Funcionario cadastrarFunc() {
         Scanner in = new Scanner(System.in);
+        
+        //matricula
         System.out.print("Digite a matrícula do funcioário: ");
         String matricula = in.next();
         if (matricula.length() < 6){ 
             System.out.println("A matrícula deve ter pelo menos 6 caracteres!");
             return null;
         }
-
         Funcionario novoFunc = new Funcionario(matricula);
-        System.out.print("Digite o cargo do funcionário: ");
-        novoFunc.setMatricula(in.next());
 
+        //cargo
+        System.out.print("Digite o cargo do funcionário: ");
+        novoFunc.setCargo(in.next());
+
+        //data
         System.out.print("Digite a data de Admissão (dd/mm/yyyy): ");
         String data = in.next();
-
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/mm/yyyy");
-
         LocalDate novaData = LocalDate.parse(data, formatter);
-
-        System.out.println("Nova data = " + novaData.format(formatter));
+        
+        // System.out.println("Nova data = " + novaData.format(formatter));
 
         novoFunc.setDtAdmissao(novaData);
+
         return novoFunc;
 
     }
