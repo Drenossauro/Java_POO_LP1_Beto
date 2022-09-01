@@ -15,7 +15,7 @@ public class XeY_ponto {
     // Metodos
 
     public double getX() {
-        return x;
+        return this.x;
     }
 
     public void setX(double x) {
@@ -23,16 +23,22 @@ public class XeY_ponto {
     }
 
     public double getY() {
-        return y;
+        return this.y;
     }
+
     public void setY(double y) {
         this.y = y;
     }
+    //=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
-
-    public double distance(XeY_ponto p1, XeY_ponto p2) {
-        double d = Math.pow((p1.x - p2.x), 2) + Math.pow((p1.y - p2.y), 2);
-        System.out.println(Math.sqrt(d));
-        return Math.sqrt(d);
+    public void move(int nX, int nY) {
+        this.x = nX;
+        this.y = nY;
     }
+
+    // public double distance(XeY_ponto p1, XeY_ponto p2) {
+    //     double d = Math.pow((p1.x - p2.x), 2) + Math.pow((p1.y - p2.y), 2);
+    //     System.out.println(Math.sqrt(d));
+    //     return Math.sqrt(d);
+    // }
 }
