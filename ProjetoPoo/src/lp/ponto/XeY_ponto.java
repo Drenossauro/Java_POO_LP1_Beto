@@ -1,5 +1,4 @@
-package ProjetoPoo.src.ex_ponto.ponto;
-    
+package ProjetoPoo.src.lp.ponto;
 
 public class XeY_ponto {
     //Atributos
@@ -13,8 +12,6 @@ public class XeY_ponto {
         this.x = x;
         this.y = y;
     }
-
-
     // Metodos
 
     public double getX() {
@@ -38,5 +35,4 @@ public class XeY_ponto {
         System.out.println(Math.sqrt(d));
         return Math.sqrt(d);
     }
-
 }
