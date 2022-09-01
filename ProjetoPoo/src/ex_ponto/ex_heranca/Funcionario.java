@@ -10,12 +10,18 @@ public class Funcionario extends Pessoa {
     private LocalDate dtAdmissao;
     private String cargo;
 
+     public Funcionario(String nome, LocalDate dtNascimento, String endereco, String formacao) {
+       super(nome, dtNascimento, endereco);
+        this.nome = nome;
+        this.dtNascimento = dtNascimento; 
+    }//colocar super em todos
+
     // ----
     public Funcionario(String matricula) {
         this.matricula = matricula;
     }
-    // ---
-    
+    // --- 
+     
     public String getMatricula() {
         return this.matricula;
     }
@@ -42,7 +48,7 @@ public class Funcionario extends Pessoa {
 
     @Override
     public String toString() {
-        return ("Matrícula: \t" + this.matricula + "\nCargo: \t" + this.cargo + "\nData de Admissão: \t" + this.dtAdmissao );
+        return ("Matrícula: " + this.matricula + "\nCargo: " + this.cargo + "\nData de Admissão: " + this.dtAdmissao );
     }
 
     public static Funcionario cadastrarFunc() {
@@ -64,7 +70,7 @@ public class Funcionario extends Pessoa {
         //data
         System.out.print("Digite a data de Admissão (dd/mm/yyyy): ");
         String data = in.next();
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/mm/yyyy");
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         LocalDate novaData = LocalDate.parse(data, formatter);
         
         // System.out.println("Nova data = " + novaData.format(formatter));

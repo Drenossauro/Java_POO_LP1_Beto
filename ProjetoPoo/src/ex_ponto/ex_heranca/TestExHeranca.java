@@ -11,7 +11,7 @@
 //         Autor beto = new Autor("Paulo", dtNascimento,"R:02", "Computação", 4);
         
 //         //obejeto livro Poo
-//         Livro livroPoo = new Livro("ProjetoPoo");
+//         Livro livroPoo = new Livro("ProjetoPoo"); 
 //         livroPoo.setEditora("Editora Erica");
 //         LocalDate dataLancamentoPoo = LocalDate.of(2022, Month.APRIL, 1);
 //         livroPoo.setDtLancamento(dataLancamentoPoo);

@@ -1,7 +1,7 @@
 package ProjetoPoo.src.ex_ponto.classe;
 
 public class Comercial extends Construcao {
-    private String cnpjDono;
+    private String cnpjDono; 
   
     public String getCnpjDono() {
       return this.cnpjDono;

@@ -5,7 +5,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
 
-public class Autor extends Pessoa {
+public class Autor extends Pessoa { 
     private String formacao;
     private int qtoLivros;//nunca armazenar isso
 
@@ -22,7 +22,7 @@ public class Autor extends Pessoa {
     }
     // ---
 
-    public String getFormacao() {
+    public String getFormacao() { 
         return this.formacao;
     }
 
@@ -40,7 +40,7 @@ public class Autor extends Pessoa {
 
     @Override
     public String toString() {
-        return ("Nome: \t" + this.nome + "\nFormação: \t" + this.formacao + "\nData de nascimento: \t" + this.dtNascimento);
+        return ("Nome do Autor: \t" + this.nome + "\nFormação: " + this.formacao + "\nData de nascimento: " + this.dtNascimento);
     }
 
     public static Autor cadastrarAutor() {
@@ -61,7 +61,7 @@ public class Autor extends Pessoa {
         System.out.print("Digite a data de nascimento do autor (dd/mm/yyyy): ");
         String data = in.next();
 
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/mm/yyyy");
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
         LocalDate novaData = LocalDate.parse(data, formatter);
 

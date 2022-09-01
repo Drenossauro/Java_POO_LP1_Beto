@@ -3,7 +3,7 @@ package ProjetoPoo.src.ex_ponto.ex_heranca;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
+import java.util.Scanner; 
 
 public class SistemaBi {
     private final static String[] opcoes = {
@@ -83,7 +83,7 @@ public class SistemaBi {
             case 3:
                 System.out.println("\n + Cadastrando Estudante + \n");
                 Estudante novoEstudante = Estudante.cadastrarEstudante();
-                System.out.println("Novo estudante cadastrado!\n\nResumo...");
+                System.out.println("\nNovo estudante cadastrado!\n\nResumo...");
                 System.out.println(novoEstudante.toString());
                 estudantes.add(novoEstudante);
                 break;
@@ -92,7 +92,7 @@ public class SistemaBi {
             case 4:
                 System.out.println("\n + Cadastrando Autor + \n");
                 Autor novoAutor = Autor.cadastrarAutor();
-                System.out.println("Novo autor cadastrado!\n\nResumo...");
+                System.out.println("\nNovo autor cadastrado!\n\nResumo...");
                 System.out.println(novoAutor.toString());
                 autores.add(novoAutor);
                 break;

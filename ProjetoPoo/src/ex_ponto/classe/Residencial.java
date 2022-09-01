@@ -5,12 +5,12 @@ public class Residencial extends Construcao implements Contrato {
     private int num;
     private String nome; // casa verde
   
-    private boolean ocupada;
+    private boolean ocupada; 
   
     public Residencial(String _nome, boolean _ocupada) {
       this.nome = _nome;
       this.ocupada = _ocupada;
-    }
+    } 
   
     public Residencial(
       int num,

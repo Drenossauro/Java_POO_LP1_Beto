@@ -5,10 +5,10 @@
 // import java.time.format.DateTimeFormatter;
 // import java.util.Scanner;
 
-// public class Emprestimo {
+// public class Emprestimo{
 //     private Estudante estudante; // sempre encapsular os atributos
 //     private Funcionario funcionario;
-//     private Livro livro;
+//     private Livro livro; 
 //     private LocalDate dtEmprestimo;
 //     private LocalDate dtDevolucao;
 
@@ -63,7 +63,7 @@
 //         this.dtDevolucao = dtDevolucao;
 //     }
 
-//     @Override sob escrita
+//     @Override //sob escrita
 //     public String toString() {
 //         return ("Estudante:\t" + this.estudante + "\nFuncionario:\t" + this.funcionario + "\nLivro: \t" + this.livro
 //                 + "\n Data do emprestimo: \t" + this.dtEmprestimo + "\nData da devolução: \t" + this.dtDevolucao);
@@ -79,19 +79,17 @@
 //             System.out.println("O RA deve ter pelo menos 6 caracteres!");
 //             return null;
 //         }
-
-//         Emprestimo novoEmprestimoRealizado = new Emprestimo(livro);
+//         Emprestimo novoEmprestimoRealizado = new Emprestimo();
+        
 //         System.out.print("Digite o curso do Estudante: ");
 //         novoEmprestimoRealizado.setDtEmprestimo(in.next());
 
-//         System.out.print("Digite a data de Emprestimo (dd/mm/yyyy): ");
+//         System.out.print("Digite a data de Emprestimo (dd/MM/yyyy): ");
 //         String data = in.next();
-
 //         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/mm/yyyy");
-
 //         LocalDate novaData = LocalDate.parse(data, formatter);
 
-//         System.out.println("Nova data = " + novaData.format(formatter));
+//         // System.out.println("Nova data = " + novaData.format(formatter));
 
 //         novoEmprestimoRealizado.setDtEmprestimo(novaData);
 //         return novoEmprestimoRealizado;

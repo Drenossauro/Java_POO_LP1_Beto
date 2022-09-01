@@ -5,7 +5,7 @@ public abstract class Construcao {
     protected double fundo;
     protected int qtoPortas;
     protected int qtoJanelas;
-    protected double valor;
+    protected double valor; 
 
 
     public double getFrente() {

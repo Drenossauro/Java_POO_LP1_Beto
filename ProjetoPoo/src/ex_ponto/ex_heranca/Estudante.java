@@ -13,7 +13,7 @@ public class Estudante extends Pessoa {
      // ----
      public Estudante(String ra) {
         this.ra = ra;
-    } 
+    }  
     // ---
 
     public String getRa() {
@@ -42,12 +42,13 @@ public class Estudante extends Pessoa {
 
     @Override
     public String toString() {
-        return ("Ra: \t" + this.ra + "\nCurso: \t" + this.curso + "\nData de Inicio: \t" + this.dtInicio);
+        return ("Ra: " + this.ra + "\nCurso: " + this.curso + "\nData de Inicio: " + this.dtInicio);
     }
 
+   
     public static Estudante cadastrarEstudante() {
         Scanner in = new Scanner(System.in);
-        
+         
         //ra
         System.out.print("Digite o RA do estudante: ");
         String ra = in.next();
@@ -64,7 +65,7 @@ public class Estudante extends Pessoa {
         //data 
         System.out.print("Digite a data de Inicio do curso (dd/mm/yyyy): ");
         String data = in.next();
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/mm/yyyy");
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         LocalDate novaData = LocalDate.parse(data, formatter);
         // System.out.println("Nova data = " + novaData.format(formatter));
         novoEstudante.setDtInicio(novaData);

@@ -15,7 +15,9 @@ public abstract class Pessoa {
         this.nome = _nome;
         this.dtNascimento = _dtNascimento;
         this.endereco = _endereco;
-    }
+    } 
+
+    
 
 
     public String getNome() {
@@ -41,7 +43,7 @@ public abstract class Pessoa {
     public void setEndereco(String endereco) {
         this.endereco = endereco;
     }
-
+ 
 
 
 }
