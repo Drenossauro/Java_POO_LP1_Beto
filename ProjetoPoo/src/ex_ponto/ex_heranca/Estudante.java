@@ -69,8 +69,7 @@ public class Estudante extends Pessoa {
         LocalDate novaData = LocalDate.parse(data, formatter);
         // System.out.println("Nova data = " + novaData.format(formatter));
         novoEstudante.setDtInicio(novaData);
-
-
+        
         return novoEstudante;
 
     }

@@ -46,26 +46,25 @@ public class Autor extends Pessoa {
     public static Autor cadastrarAutor() {
 
         Scanner in = new Scanner(System.in);
-        
+        //autor
         System.out.print("Digite o nome do autor: ");
         String nome = in.next();
         if (nome.length() < 4){ 
             System.out.println("O nome deve ter pelo menos 4 caracteres!");
             return null;
         }
-
         Autor novoAutor = new Autor(nome);
+        
+        //formação
         System.out.print("Digite a formação do autor: ");
         novoAutor.setFormacao(in.next());
 
+        //data
         System.out.print("Digite a data de nascimento do autor (dd/mm/yyyy): ");
         String data = in.next();
-
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-
         LocalDate novaData = LocalDate.parse(data, formatter);
-
-        System.out.println("Nova data = " + novaData.format(formatter));
+        // System.out.println("Nova data = " + novaData.format(formatter));
 
         novoAutor.setDtNascimento(novaData);
         return novoAutor;

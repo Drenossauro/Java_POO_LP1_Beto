@@ -107,19 +107,18 @@
 //             System.out.println("O RA deve ter pelo menos 6 caracteres!");
 //             return null;
 //         }
-
 //         Emprestimo novoEmprestimoRecebido = new Emprestimo();
+
 //         System.out.print("Digite o curso do Estudante: ");
 //         novoEmprestimoRecebido.setDtDevolucao(in.next());
-
+//          
+//         //data
 //         System.out.print("Digite a data de Devolução (dd/mm/yyyy): ");
 //         String data = in.next();
-
 //         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/mm/yyyy");
-
 //         LocalDate novaData = LocalDate.parse(data, formatter);
 
-//         System.out.println("Nova data = " + novaData.format(formatter));
+        //// System.out.println("Nova data = " + novaData.format(formatter));
 
 //         novoEmprestimoRecebido.setDtEmprestimo(novaData);
 //         return novoEmprestimoRecebido;
