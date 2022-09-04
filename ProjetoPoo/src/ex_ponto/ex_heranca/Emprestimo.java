@@ -1,9 +1,11 @@
-import java.time.DateTimeException;
+package ProjetoPoo.src.ex_ponto.ex_heranca;
+
+
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
-public class Emprestimo{
+public class Emprestimo extends Pessoa{
     private Estudante estudante; // sempre encapsular os atributos
     private Funcionario funcionario;
     private Livro livro; 
@@ -20,7 +22,6 @@ public class Emprestimo{
         this.dtDevolucao = dtDevolucao;
     }
 
-     
     // ---
 
     public Estudante getEstudante() {
@@ -65,37 +66,41 @@ public class Emprestimo{
 
     @Override //sob escrita
     public String toString() {
-        return ("Estudante:\t" + this.estudante + "\nFuncionario:\t" + this.funcionario + "\nLivro: \t" + this.livro
+            return ("Estudante:\t" + this.estudante + "\nFuncionario:\t" + this.funcionario + "\nLivro: \t" + this.livro
                 + "\n Data do emprestimo: \t" + this.dtEmprestimo + "\nData da devolução: \t" + this.dtDevolucao);
         // DaterTimeFormatter
     }
-
+    
     // Realizar emprestimo
     public static Emprestimo realizaEmprestimo() {
-        Scanner in = new Scanner(System.in);
-        System.out.print("Digite o RA do estudante: ");
-        String ra = in.next();
-        if (ra.length() < 6) {
+            Scanner in = new Scanner(System.in);
+            System.out.print("Digite o RA do estudante: ");
+        String estudante = in.next();
+        if (estudante.length() < 6) {
             System.out.println("O RA deve ter pelo menos 6 caracteres!");
             return null;
         }
-
         System.out.print("Digite o titulo do livro: ");
-        String titulo = in.next();
+        String livro = in.next();
 
-        Emprestimo novoEmprestimoRealizado = new Emprestimo();
+        System.out.print("Digite o nome do funcionarioque esta realizando o emprestimo: ");
+        String funcionario = in.next();
+
+        System.out.print("Digite a data de Emprestimo do livro (dd/MM/yyyy): ");
+        String dtEmprestimo = in.next();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        LocalDate novaDataEmp = LocalDate.parse(dtEmprestimo, formatter);
         
-        // System.out.print("Digite o curso do Estudante: ");
-        // novoEmprestimoRealizado.setDtEmprestimo(in.next());
+        System.out.print("Digite a data da devolução do licro (dd/MM/yyyy): ");
+        String dtDevolucao = in.next();
+        DateTimeFormatter formatter2 = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        LocalDate novaDataDev = LocalDate.parse(dtDevolucao, formatter2);
+        
+        Emprestimo novoEmprestimoRealizado = new Emprestimo(null, null, null, novaDataDev, novaDataDev);
+        
+        novoEmprestimoRealizado.setDtEmprestimo(novaDataEmp);
+        novoEmprestimoRealizado.setDtDevolucao(novaDataEmp);
 
-        System.out.print("Digite a data de Emprestimo (dd/MM/yyyy): ");
-        String data = in.next();
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/mm/yyyy");
-        LocalDate novaData = LocalDate.parse(data, formatter);
-
-        System.out.println("Nova data = " + novaData.format(formatter));
-
-        novoEmprestimoRealizado.setDtEmprestimo(novaData);
         return novoEmprestimoRealizado;
 
     }
@@ -103,36 +108,6 @@ public class Emprestimo{
     // =======================================================================================================================================
     // Receber emprestimo
 
-    public static Emprestimo receberDevolucao() {
-        Scanner in = new Scanner(System.in);
-        System.out.print("Digite o RA do estudante: ");
-        String ra = in.next();
-        if (ra.length() < 6) {
-            System.out.println("O RA deve ter pelo menos 6 caracteres!");
-            return null;
-        }
-
-        System.out.print("Digite o titulo do livro: ");
-        String titulo = in.next();
-
-        Emprestimo novoEmprestimoRecebido = new Emprestimo();
-
-        // System.out.print("Digite o curso do Estudante: ");
-         
-        // estudante.setCurso(in.next());
-         
-         
-        //data
-        System.out.print("Digite a data de Devolução (dd/mm/yyyy): ");
-        String data = in.next();
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/mm/yyyy");
-        LocalDate novaData = LocalDate.parse(data, formatter);
-
-        // System.out.println("Nova data = " + novaData.format(formatter));
-
-        novoEmprestimoRecebido.setDtEmprestimo(novaData);
-        return novoEmprestimoRecebido;
-
-    }
+    
 
 }

@@ -15,7 +15,7 @@ public class Autor extends Pessoa {
         this.formacao = formacao;
         this.qtoLivros = qtoLivros; 
     }
-
+ 
      // ----
      public Autor(String nome) {
         this.nome = nome;
@@ -40,7 +40,7 @@ public class Autor extends Pessoa {
 
     @Override
     public String toString() {
-        return ("Nome do Autor: \t" + this.nome + "\nFormação: " + this.formacao + "\nData de nascimento: " + this.dtNascimento);
+        return ("Nome do Autor:\t" + this.nome + "\nFormação: " + this.formacao + "\nData de nascimento: " + this.dtNascimento);
     }
 
     public static Autor cadastrarAutor() {
@@ -50,8 +50,8 @@ public class Autor extends Pessoa {
         System.out.print("Digite o nome do autor: ");
         String nome = in.next();
         if (nome.length() < 4){ 
-            System.out.println("O nome deve ter pelo menos 4 caracteres!");
-            return null;
+            System.out.println("!!! O nome deve ter pelo menos 4 caracteres !!!\n");
+            return cadastrarAutor();
         }
         Autor novoAutor = new Autor(nome);
         

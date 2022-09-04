@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class Funcionario extends Pessoa {
     private String matricula;
     private LocalDate dtAdmissao;
-    private String cargo;
+    private String cargo; 
 
      public Funcionario(String nome, LocalDate dtNascimento, String endereco, String formacao) {
        super(nome, dtNascimento, endereco);
@@ -58,10 +58,21 @@ public class Funcionario extends Pessoa {
         System.out.print("Digite a matrícula do funcioário: ");
         String matricula = in.next();
         if (matricula.length() < 6){ 
-            System.out.println("A matrícula deve ter pelo menos 6 caracteres!");
-            return null;
+            System.out.println("!!! A matrícula deve ter pelo menos 6 caracteres !!!\n");
+            return cadastrarFunc();
         }
         Funcionario novoFunc = new Funcionario(matricula);
+
+        //nome do funcionario
+        System.out.print("Digite o nome do estudante: ");
+        novoFunc.setNome(in.next());
+        
+        //data Nascimento
+        System.out.print("Digite a data de Nascimento do estudante (dd/mm/yyyy): ");
+        String dataN = in.next();
+        DateTimeFormatter formatterN = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        LocalDate novaDataDeNasc = LocalDate.parse(dataN, formatterN); 
+        novoFunc.setDtNascimento(novaDataDeNasc);   
 
         //cargo
         System.out.print("Digite o cargo do funcionário: ");

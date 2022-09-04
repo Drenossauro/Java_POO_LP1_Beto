@@ -53,8 +53,8 @@ public class Livro{
         System.out.print("Digite o titulo do livro: ");
         String titulo = in.next();
         if (titulo.length() < 2) {
-            System.out.println("O titulo deve ter pelo menos 2 catacteres!");
-            return null;
+            System.out.println("!!! O titulo deve ter pelo menos 2 catacteres !!!\n");
+            return cadastrarLivro();
         }
         Livro novoLivro = new Livro(titulo);
 

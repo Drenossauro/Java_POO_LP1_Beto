@@ -30,7 +30,7 @@ public class SistemaBi {
     private static List<Funcionario> funcionarios = new ArrayList<Funcionario>();
     private static List<Estudante> estudantes = new ArrayList<Estudante>();
     private static List<Autor> autores = new ArrayList<Autor>();
-    // private static List<Emprestimo> emprestimos = new ArrayList<Emprestimo>();
+    private static List<Emprestimo> emprestimos = new ArrayList<Emprestimo>();
     // private static List<Emprestimo> devolucoes = new ArrayList<Emprestimo>();
 
     private static Scanner buffer = new Scanner(System.in);
@@ -98,13 +98,13 @@ public class SistemaBi {
                 break;
 
             // Realizar emprestimo
-            // case 5:
-            //     System.out.println("\n + Realizando Emprestimo + \n");
-            //     Emprestimo novoEmprestimoRealizado = Emprestimo.realizaEmprestimo();
-            //     System.out.println("Emprestimo realizado!\n\nResumo...");
-            //     System.out.println(novoEmprestimoRealizado.toString());
-            //     emprestimos.add(novoEmprestimoRealizado);
-            //     break;
+            case 5:
+                System.out.println("\n + Realizando Emprestimo + \n");
+                Emprestimo novoEmprestimoRealizado = Emprestimo.realizaEmprestimo();
+                System.out.println("Emprestimo realizado!\n\nResumo...");
+                System.out.println(novoEmprestimoRealizado.toString());
+                emprestimos.add(novoEmprestimoRealizado);
+                break;
 
             // case 6:
             //     System.out.println("\n + Realizando Devolição + \n");
