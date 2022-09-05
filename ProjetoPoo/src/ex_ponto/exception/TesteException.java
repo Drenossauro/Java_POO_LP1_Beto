@@ -7,7 +7,7 @@ public class TesteException {
         String novaFrase = null;
 
         try {
-            novaFrase = frase.toUpperCase();
+            // novaFrase = frase.toUpperCase();
         } catch (NullPointerException ex) {
             System.out.println("\nError: Frase Nula!\nUsando uma frase default!\n");
             frase = "\nEstou aprendendo";

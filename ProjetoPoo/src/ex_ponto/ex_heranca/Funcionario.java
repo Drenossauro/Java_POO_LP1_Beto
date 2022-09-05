@@ -64,11 +64,11 @@ public class Funcionario extends Pessoa {
         Funcionario novoFunc = new Funcionario(matricula);
 
         //nome do funcionario
-        System.out.print("Digite o nome do estudante: ");
+        System.out.print("Digite o nome do funcionário: ");
         novoFunc.setNome(in.next());
         
         //data Nascimento
-        System.out.print("Digite a data de Nascimento do estudante (dd/mm/yyyy): ");
+        System.out.print("Digite a data de Nascimento do funcionário (dd/mm/yyyy): ");
         String dataN = in.next();
         DateTimeFormatter formatterN = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         LocalDate novaDataDeNasc = LocalDate.parse(dataN, formatterN); 
