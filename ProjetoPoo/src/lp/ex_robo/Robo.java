@@ -1,22 +1,33 @@
 package ProjetoPoo.src.lp.ex_robo;
 
-import ProjetoPoo.src.lp.ponto.XeY_ponto;
+
 
 public class Robo {
-    XeY_ponto position;
-    char direction;
+    private double x;
+    private double y;
 
-    public Robo(double x, double y) { 
-        this.direction = 'N';
+
+    public Robo(double _x, double _y) { 
+        this.x = _x;
+        this.y = _y;
     }
+    
 
     public void move(char dir, int qtoMove) {}
 
-    public void top(int pos){}
+    public void top(int adicionar){
+        y += adicionar;
+    }
+ 
+    public void down(int diminuir){
+        y -= diminuir;
+    }
 
-    public void down(int pos){}
+    public void left(int adicionar){
+        x += adicionar;
+    }
 
-    public void left(int pos){}
-
-    public void right(int pos){}
+    public void right(int diminuir){
+        x -= diminuir;
+    }
 }

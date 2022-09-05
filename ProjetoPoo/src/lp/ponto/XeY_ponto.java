@@ -2,15 +2,15 @@ package ProjetoPoo.src.lp.ponto;
 
 public class XeY_ponto {
     //Atributos
-    private double x;
-    private double y;
+    private double x = 0;
+    private double y = 0;
         
     public XeY_ponto() {}
 
 
-    public XeY_ponto(double x, double y) {
-        this.x = x;
-        this.y = y;
+    public XeY_ponto(double _x, double _y) {
+        this.x = _x;
+        this.y = _y;
     }
     // Metodos
 
@@ -31,14 +31,18 @@ public class XeY_ponto {
     }
     //=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
-    public void move(int nX, int nY) {
+    public void move(double nX, double nY) {
         this.x = nX;
-        this.y = nY;
+        this.y = nY; 
     }
 
-    // public double distance(XeY_ponto p1, XeY_ponto p2) {
-    //     double d = Math.pow((p1.x - p2.x), 2) + Math.pow((p1.y - p2.y), 2);
-    //     System.out.println(Math.sqrt(d));
-    //     return Math.sqrt(d);
-    // }
+    public double distance(XeY_ponto p1, XeY_ponto p2) {
+        double d = Math.pow((p1.x - p2.x), 2) + Math.pow((p1.y - p2.y), 2);
+        System.out.println(Math.sqrt(d));
+        return Math.sqrt(d);
+    }
+
+    public String toString(){
+        return "Ponto ("+ this.x +","+ this.y +")";
+    }
 }
