@@ -32,15 +32,15 @@ public class Robo {
         y += adicionar;
     }
     //baixo
-    public void down(int diminuir){
-        y -= diminuir;
+    public void down(int subtrair){
+        y -= subtrair;
     }
     //esquerda
     public void left(int adicionar){
         x += adicionar;
     }
     //direita
-    public void right(int diminuir){
-        x -= diminuir;
+    public void right(int subtrair){
+        x -= subtrair;
     }
 }
