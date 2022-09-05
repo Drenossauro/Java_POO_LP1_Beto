@@ -11,10 +11,11 @@ public class Mover {
         int adicionar = 0;
         int op = 1;
         
+        System.out.print("\n\n++ROBO++ ");
         System.out.print("\n\nDigite a posição inicial do robô x : ");
          x = in.nextInt();
          
-        System.out.print("\\nDigite a posição inicial do robô y : ");
+        System.out.print("\nDigite a posição inicial do robô y : ");
          y = in.nextInt();
         Robo robo = new Robo(x,y);
     
