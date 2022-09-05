@@ -34,7 +34,7 @@ public class SistemaBi {
     private static List<Emprestimo> devolucoes = new ArrayList<Emprestimo>();
 
     private static Scanner buffer = new Scanner(System.in);
-
+ 
     public static void main(String[] args) throws IOException {
         int op = 1;
         while (op != 0) {
@@ -110,7 +110,7 @@ public class SistemaBi {
             case 6:
                 System.out.println("\n + Realizando Devolição + \n");
                 Emprestimo novoEmprestimoRecebido = Emprestimo.receberDevolucao();
-                System.out.println("Emprestimo recebido!\n\nResumo...");
+                System.out.println("Devolução recebida!\n\nResumo...");
                 System.out.println(novoEmprestimoRecebido.toString());
                 devolucoes.add(novoEmprestimoRecebido);
                 break;

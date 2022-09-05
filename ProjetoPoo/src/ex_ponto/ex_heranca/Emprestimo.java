@@ -58,7 +58,7 @@ public class Emprestimo{
     // public void setEstudante(Estudante estudante) {
     //     this.estudante = estudante;
     // }
-
+ 
     // public Funcionario getFuncionario() {
     //     return this.funcionario;
     // }
@@ -93,8 +93,8 @@ public class Emprestimo{
 
     @Override //sob escrita
     public String toString() {
-            return ("Estudante:\t" + this.estudante + "\nFuncionario:\t" + this.funcionario + "\nLivro: \t" + this.livro
-                + "\nData do emprestimo: \t" + this.dtEmprestimo + "\nData da devolução: \t" + this.dtDevolucao);
+            return ("Estudante (RA): " + this.estudante + "\nFuncionario: " + this.funcionario + "\nLivro: " + this.livro
+                + "\nData do emprestimo: " + this.dtEmprestimo + "\nData da devolução: " + this.dtDevolucao);
         // DaterTimeFormatter
     }
     
@@ -105,19 +105,24 @@ public class Emprestimo{
         String estudante1 = in.next();
         if (estudante1.length() < 6) {
             System.out.println("O RA deve ter pelo menos 6 caracteres!");
-            return null;
+            return realizaEmprestimo();
         }
+
+        //Titulo do livro
         System.out.print("Digite o titulo do livro: ");
         String livro1 = in.next();
 
-        System.out.print("Digite o nome do funcionarioque esta realizando o emprestimo: ");
+        //Funcionario responsavel
+        System.out.print("Digite o nome do funcionario que esta realizando o emprestimo: ");
         String funcionario1 = in.next();
 
+        //Dia doemprestimo
         System.out.print("Digite a data de Emprestimo do livro (dd/MM/yyyy): ");
         String dtEmprestimo = in.next();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         LocalDate novaDataEmp = LocalDate.parse(dtEmprestimo, formatter);
         
+        //Dia da devolução
         System.out.print("Digite a data da devolução do livro (dd/MM/yyyy): ");
         String dtDevolucao = in.next();
         DateTimeFormatter formatter2 = DateTimeFormatter.ofPattern("dd/MM/yyyy");
@@ -141,24 +146,27 @@ public class Emprestimo{
         String estudante1 = in.next();
         if (estudante1.length() < 6) {
             System.out.println("O RA deve ter pelo menos 6 caracteres!");
-            return null;
+            return receberDevolucao();
         }
+        //Titulo do Livro emprestado
         System.out.print("Digite o titulo do livro: ");
         String livro1 = in.next();
 
-        System.out.print("Digite o nome do funcionarioque esta recebendo a devolução: ");
+        //Funcionario responsavel
+        System.out.print("Digite o nome do funcionario que esta recebendo a devolução: ");
         String funcionario1 = in.next();
 
+        //Dia da devolução
         System.out.print("Digite a data da devolução do livro (dd/MM/yyyy): ");
         String dtDevolucao = in.next();
         DateTimeFormatter formatter2 = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         LocalDate novaDataDev = LocalDate.parse(dtDevolucao, formatter2);
         
+        //Dia do emprestimo
         System.out.print("Digite a data de Emprestimo do livro (dd/MM/yyyy): ");
         String dtEmprestimo = in.next();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         LocalDate novaDataEmp = LocalDate.parse(dtEmprestimo, formatter);
-        
         
         Emprestimo novoEmprestimoRecebido = new Emprestimo(estudante1, funcionario1, livro1, novaDataDev, novaDataDev);
         
