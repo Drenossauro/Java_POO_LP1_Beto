@@ -20,8 +20,7 @@ public class Mover {
         Robo robo = new Robo(x,y);
     
     do{
-        
-        System.out.println(" ------------------------------------------");
+        System.out.println("\n ------------------------------------------");
         System.out.println("|    +++ Sistema para mover o Robo +++     |");
         System.out.println("|------------------------------------------|");
         System.out.println("|            Escolha uma direção           |");
@@ -34,11 +33,11 @@ public class Mover {
         System.out.println("|   0 - Sair                               |");
         System.out.println("|                                          |");
         System.out.println(" ------------------------------------------");
-        System.out.println("  Digite aqui sua movimentação:                                                             |");
-        op = in.nextInt();
-        
+        System.out.print("\nDigite aqui sua direção: ");
+            op = in.nextInt();
+
         if(op != 0){
-            System.out.println("\nDigite quantos passos queira movimentar-se nessa direção: ");
+            System.out.print("\nDigite quantos passos queira movimentar-se nessa direção: ");
             adicionar = in.nextInt();
         }
 
@@ -56,14 +55,15 @@ public class Mover {
                 robo.left(adicionar);
                 break;
             case 0:
-                System.out.println("Posição atual (x,y):(" + robo.getX() + "),(" + robo.getY() + ")");
+                System.out.println("Posição atual (x,y):(" + robo.getX() + "," + robo.getY() + ")");
                 break;
             default:
                 System.out.println("Saindo da função escolha");
                 break;
             }
         
-            System.out.println("\nPosição atual do robô (x,y):(" + robo.getX() + ")(" + robo.getY() + ")");
+            System.out.println("\nPosição atual do robô (x,y):(" + robo.getX() + "," + robo.getY() + ")");
+            System.in.read();// System("pause")
 
 
         }while
