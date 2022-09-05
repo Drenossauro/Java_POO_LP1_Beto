@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 
 public class Mover {
+    
     private final static String[] opcoes = {
         "\n\n",
         " -----------------------------------------------------------------",
@@ -24,57 +25,51 @@ public class Mover {
         
 };
     public static void main(String[] args) throws IOException{
+        Robo robo = new Robo(0, 0);
+        
         Scanner in = new Scanner(System.in);
-        int x;
-        int y;
-        int adicionar = 0;
-
-        System.out.print("Digite a posição inicial x: ");
-            x = in.nextInt();
-        System.out.print("\nDigite a posição inicial y: ");
-            y = in.nextInt();
-
-        Robo mover = new Robo(x,y);
-
-        private static void buffer = new Scanner(System.in);
-
-
+        System.out.println("Posição atual (x,y):(" + robo.getX() + "),(" + robo.getY() + ")");
+        
         int op = 1;
         while (op != 0) {
             printMenu();
             System.out.print("Digite Aqui: ");
-            op = buffer.nextInt();
+            op = in.nextInt();
             escolha(op);
             System.in.read();
         }
     }
-        private static void printMenu() {
-            System.out.print("\033[H\033[2j");
-            System.out.flush();
-            for (String op : opcoes) {
-                System.out.println(op);
+    
+    private static void printMenu() {
+        System.out.print("\033[H\033[2j");
+        System.out.flush();
+        for (String op : opcoes) {
+            System.out.println(op);
+        }
+    }
+    
+    int adicionar = 0;
+    private static void escolha(int op) {
+        switch (op) {
+            case 1:
+                robo.top(adicionar);
+                break;
+            case 2:
+                robo.right(adicionar);
+                break;
+            case 3:
+                robo.down(adicionar);
+                break;
+            case 4:
+                robo.left(adicionar);
+                break;
+            case 0:
+                System.out.println("Posição atual (x,y):(" + robo.getX() + "),(" + robo.getY() + ")");
+                break;
+            default:
+                System.out.println("Saindo da função escolha");
+                break;
             }
         }
-
-        private static void escolha(int op) {
-            switch (op) {
-                case 1:
-                Robo.top(adicionar);
-                break;
-                case 1:
-                Robo.top(adicionar);
-                break;
-                case 1:
-                Robo.top(adicionar);
-                break;
-                case 1:
-                Robo.top(adicionar);
-                break;
-                case 1:
-                Robo.top(adicionar);
-                break;
-            }
-        }
-
     }
 

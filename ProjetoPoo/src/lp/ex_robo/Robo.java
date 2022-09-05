@@ -1,35 +1,32 @@
 package ProjetoPoo.src.lp.ex_robo;
 
-
-
 public class Robo {
     private int x;
     private int y;
-
- //GET AND SET
-    public double getX() {
-        return this.x;
-    }
-
-    public void setX(int x) {
+    
+    public Robo(int x, int y) { 
         this.x = x;
-    }
-
-    public double getY() {
-        return this.y;
-    }
-
-    public void setY(int y) {
         this.y = y;
     }
 
-    public Robo(int _x, int _y) { 
-        this.x = _x;
-        this.y = _y;
+    //GET AND SET
+    public int getX() {
+        return x;
     }
-    
 
-    public void move(char dir, int qtoMove) {}
+    // public void setX(int x) {
+    //     this.x = x;
+    // }
+
+    public int getY() {
+        return y;
+    }
+
+    // public void setY(int y) {
+    //     this.y = y;
+    // }
+
+    // public void move(char dir, int qtoMove) {}
     //cima
     public void top(int adicionar){
         y += adicionar;
