@@ -3,8 +3,8 @@ package ProjetoPoo.src.lp.lista;
 public class ListaLinear {
 
     public static class Lista {
-        public No inicio;
-        public int tam;
+        public No inicio;// primeiro elementoda lista
+        public int tam;//tamanho da lista
     }
 
     // inner class
@@ -22,6 +22,7 @@ public class ListaLinear {
         l = addFim(l, 2);
         l = addFim(l, 3);
         l = addInicio(l, 4);
+        1 = addMeio(1,4);
         printLista(l);
 
     }
@@ -36,6 +37,18 @@ public class ListaLinear {
     // --------------------------------------------------------------------------------------------------------------------------
 
     public static Lista addInicio(Lista l, int val) {
+
+        No n1 = new No();
+        n1.info = val;
+        n1.prox = l.inicio;
+        l.inicio = n1;
+        l.tam++;
+        return l;
+    }
+
+    // --------------------------------------------------------------------------------------------------------------------------
+
+    public static Lista addMeio(Lista l, int val) {
 
         No n1 = new No();
         n1.info = val;
@@ -68,10 +81,10 @@ public class ListaLinear {
 
     // ---------------------------------------------------------------------------------------------------------
     public static void printLista(Lista l) {
-        System.out.println("L -->");
+        System.out.println("L -> ");
         No aux = l.inicio;
         while (aux != null) {
-            System.out.println(aux.info + " --> ");
+            System.out.println(aux.info + " -> ");
             aux = aux.prox;
         }
 
