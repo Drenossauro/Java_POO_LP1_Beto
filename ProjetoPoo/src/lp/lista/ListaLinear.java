@@ -22,7 +22,7 @@ public class ListaLinear {
         l = addFim(l, 2);
         l = addFim(l, 3);
         l = addInicio(l, 4);
-        1 = addMeio(1,4);
+        // 1 = addMeio(1,4);
         printLista(l);
 
     }
