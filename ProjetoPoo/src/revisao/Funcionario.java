@@ -1,6 +1,7 @@
 package ProjetoPoo.src.revisao;
 
 import java.time.format.DateTimeFormatter;
+import java.util.Scanner;
 
 import ProjetoPoo.src.ex_ponto.ex_heranca.Pessoa;
 
@@ -40,6 +41,21 @@ public class Funcionario extends Pessoa {
         DateTimeFormatter f = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         return "Nome: " + this.nome + "\nMatricula: " + this.matricula +
             "\nStatus: " + this.status + "\nData de nascimento: " + this.dtNascimento.format(f);
+    }
+
+
+    public static lerFuncionario(){
+        Scanner in = new Scanner(System.in);
+
+        System.out.print("Digite o nome do funcionario:");
+        String nome = in.nextLine();
+
+        System.out.print("Digite a matricula do funcionario:");
+        String matricula = in.nextLine();
+
+        Funcionario objFuncionario = new Funcionario(matricula,nome);
+
+        return objFuncionario;
     }
 
 

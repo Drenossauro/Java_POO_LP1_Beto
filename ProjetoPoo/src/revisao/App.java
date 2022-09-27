@@ -4,10 +4,10 @@ import java.time.LocalDate;
 
 public class App {
     public static void main(String[] args) {
-        Estudante obj1 = new Estudante("201202120","Beto");
-        obj1.setCurso("TADS");
-        obj1.setDtNascimento(LocalDate.of(2020, 5, 1));
-        System.out.println(obj1);
+        Estudante objEstudante = new Estudante("201202120","Beto");
+        objEstudante.setCurso("TADS");
+        objEstudante.setDtNascimento(LocalDate.of(2020, 5, 1));
+        System.out.println(objEstudante);
 
         // 'Funcionario func1 = new Funcionario("","");
 
@@ -21,7 +21,15 @@ public class App {
         objLivro.setEditora("LIVRAA");
         objLivro.setNpag(203);
         objLivro.setAutor(objAutor);
+        
+        Funcionario objfuncionario = new Funcionario("202012121021","Andre");
 
-        System.out.println(objLivro.getAutor());
+        Emprestimo novoEmprestimo = new Emprestimo(
+            objLivro,
+            objFuncionario,
+            objAutor,
+
+        );
+
     }
 }

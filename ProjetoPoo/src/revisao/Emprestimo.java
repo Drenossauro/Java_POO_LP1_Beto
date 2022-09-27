@@ -4,19 +4,24 @@ import java.time.LocalDate;
 
 public class Emprestimo {
     private Livro livro;
-    private Funcionario funcionario;
+    private Funcionario func;
     private Estudante estudante;
-
     private LocalDate dtEmprestimo;
     private LocalDate dtDevolucao;
 
-    public Emprestimo(Livro _livro, Funcionario _funcionario,Estudante _estudante){
+    private final int DIAS_EMPRESTIMO = 5;
+
+    public Emprestimo(Livro _livro, Funcionario _func, Estudante _estudante) {
         this.livro = _livro;
-        this.funcionario = _funcionario;
+        this.func = _func;
         this.estudante = _estudante;
-        this.dtEmprestimo = LocalDate.now();
+        this.dtEmprestimo = LocalDate.now();// data atual que foi criado o obj
+        this.dtDevolucao = this.dtEmprestimo.plusDays(DIAS_EMPRESTIMO);
     }
-    
+
+    public void devolverLivro() {
+
+    }
 
     public Livro getLivro() {
         return this.livro;
@@ -27,11 +32,11 @@ public class Emprestimo {
     }
 
     public Funcionario getFuncionario() {
-        return this.funcionario;
+        return this.func;
     }
 
     public void setFuncionario(Funcionario funcionario) {
-        this.funcionario = funcionario;
+        this.func = funcionario;
     }
 
     public Estudante getEstudante() {

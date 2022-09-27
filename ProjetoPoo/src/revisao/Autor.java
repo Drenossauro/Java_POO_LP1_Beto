@@ -23,7 +23,7 @@ public class Autor extends Pessoa {
         this.area = area;
     }
 
-
+    
 
 }
 
