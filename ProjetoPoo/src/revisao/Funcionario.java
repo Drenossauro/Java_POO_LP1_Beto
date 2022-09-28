@@ -9,7 +9,7 @@ public class Funcionario extends Pessoa {
     private String matricula;
     private boolean status;
 
-    public Funcionario(String _nome,String _matricula, boolean _status){
+    public Funcionario(String _nome,String _matricula){
         this.nome = _nome;
         this.matricula = _matricula;
     }
@@ -44,7 +44,7 @@ public class Funcionario extends Pessoa {
     }
 
 
-    public static lerFuncionario(){
+    public static Funcionario lerFuncionario(){
         Scanner in = new Scanner(System.in);
 
         System.out.print("Digite o nome do funcionario:");
