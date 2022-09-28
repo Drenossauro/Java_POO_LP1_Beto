@@ -1,5 +1,6 @@
 package ProjetoPoo.src.revisao;
 
+import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
 public class Livro {
@@ -58,6 +59,13 @@ public class Livro {
         this.autor = autor;
     }
 
+    public String toString() {
+        return "Titulo: " + this.titulo + 
+                "\nData de Lançamento: " + this.anoLancamento +
+                "\nEditora: " + this.editora +
+                "\nNúmero de Páginas: " + this.npag + 
+                "\nAutor: " + this.autor;
+    }
     
 
     public static Autor lerLivro(){
@@ -76,7 +84,7 @@ public class Livro {
         Integer npag = in.nextInt();
 
         System.out.print("Digite o titulo do Livro: ");
-        String autor = in.nextLine();
+        Autor autor = in.nextLine();
 
         Livro objLivro = new Livro(titulo, anoLancamento, editora, npag, autor);
         return objLivro;

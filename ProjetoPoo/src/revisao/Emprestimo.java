@@ -6,7 +6,7 @@ public class Emprestimo {
     private Livro livro;
     private Funcionario func;
     private Estudante estudante;
-    private LocalDate dtEmprestimo;
+    private LocalDate dtEmprestimo; 
     private LocalDate dtDevolucao;
 
     private final int DIAS_EMPRESTIMO = 5;

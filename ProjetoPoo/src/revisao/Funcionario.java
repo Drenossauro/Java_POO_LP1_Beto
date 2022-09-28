@@ -14,7 +14,7 @@ public class Funcionario extends Pessoa {
         this.matricula = _matricula;
     }
 
-    // GET e SET
+    // GET e SET 
 
     public String getMatricula() {
         return this.matricula;
