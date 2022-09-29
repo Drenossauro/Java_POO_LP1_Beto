@@ -47,14 +47,14 @@ public class Autor extends Pessoa {
         String nome = in.nextLine();
 
         System.out.print("Digite a data de Nascimento do Autor: ");
-        String dtNascimento = in.nextLine();
+        String data = in.nextLine();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-        //LocalDate dtNascimento = LocalDate.parse(dtNascimento, formatter);
-        // System.out.println("Nova data = " + novaData.format(formatter));
+        LocalDate dtNascimento = LocalDate.parse(data, formatter);
+        System.out.println("Nova data = " + dtNascimento.format(formatter));
 
         // objAutor.setDtNascimento(dtNascimento);
 
-        System.out.print("Digite o numero de livros: ");
+        System.out.print("Digite o numero de livro: ");
         int qto = in.nextInt();
 
         System.out.print("Digite a area do Autor: ");

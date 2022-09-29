@@ -68,29 +68,29 @@ public class Livro {
     }
     
 
-    public static Autor lerLivro(){
-        Scanner in = new Scanner(System.in);
+    // public static Autor lerLivro(){
+    //     Scanner in = new Scanner(System.in);
 
-        System.out.print("Digite o titulo do Livro: ");
-        String titulo = in.nextLine();
+    //     System.out.print("Digite o titulo do Livro: ");
+    //     String titulo = in.nextLine();
 
-        System.out.print("Digite o titulo do Livro: ");
-        Integer anoLancamento = in.nextInt();
+    //     System.out.print("Digite o ano de lançamento do Livro: ");
+    //     Integer anoLancamento = in.nextInt();
 
-        System.out.print("Digite o titulo do Livro: ");
-        String editora = in.nextLine();
+    //     System.out.print("Digite o nome da editora do Livro: ");
+    //     String editora = in.nextLine();
 
-        System.out.print("Digite o titulo do Livro: ");
-        Integer npag = in.nextInt();
+    //     System.out.print("Digite o número de paginas do Livro: ");
+    //     Integer npag = in.nextInt();
 
-        System.out.print("Digite o titulo do Livro: ");
-        Autor autor = in.nextLine();
+    //     System.out.print("Digite o autor do Livro: ");
+    //     Autor autor = in.nextLine();
 
-        Livro objLivro = new Livro(titulo, anoLancamento, editora, npag, autor);
-        return objLivro;
+    //     Livro objLivro = new Livro(titulo, anoLancamento, editora, npag, autor);
+    //     return objLivro;
 
 
-    }
+    // }
 
 
 }

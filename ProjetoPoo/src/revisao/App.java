@@ -35,7 +35,7 @@ public class App {
         Scanner in = new Scanner(System.in);
 
         Funcionario objfuncionario = Funcionario.lerFuncionario();
-        System.out.println(objfuncionario);
+        System.out.println(objfuncionario.getNome() + "\n " + objfuncionario.getMatricula());
 
     }
 }
