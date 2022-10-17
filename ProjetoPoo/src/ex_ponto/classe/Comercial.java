@@ -9,7 +9,7 @@ public class Comercial extends Construcao {
   
     public void setCnpjDono(String cnpjDono) {
       this.cnpjDono = cnpjDono;
-    }
+    } 
 
     @Override
     public double alterarValor() {

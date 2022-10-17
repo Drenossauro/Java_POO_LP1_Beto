@@ -23,4 +23,58 @@ Super classe
 
    vazio - agregação
    
+-   Modificadores de acesso (servem para diferenciar as permissões das implementações):
+    public (+) -> Aberto para todos (acesso às implementações públicas)
+    private (-) -> Visível apenas na própria classe
+    protected (#) ->
+    package (~) ->
+
+    -   só é um método se estiver dentro de uma classe, dentro do paradigma de orientação a objetos
+
+-   Os modificadores de acesso não podem ser usados em variáveis, mas podem ser usados em métodos.
+
+-   Funções em java são chamadas de MÉTODO
+-   Atributos: fica dentro da classe
+
+-   Atributos devem ser encapsulados
+    -   somente a classe que é dona do atributo, pode modificar diretamente o valor
+    -   os atributos não podem ser públicos
+
+CONSTRUTOR é responsável por criar um objeto e alocar ele na memória
+
+-   o construtor é a primeira coisa a ser executadas
+
+Model = modelo da aplicação, ou seja, classes que irão gerar objetos
+
+POLIMORFISMO: quando existe um método, que usamos e reescrevemos este método
+
+SOBRECARGA: acontece quando temos métodos com o mesmo nome e diferentes assinaturas
+
+ASSINATURA: public tipo_ref Nome_função Parâmetro
+
+-   Posso criar um construtor com os dados que eu quero
+-   Se eu não criar um construtor ele fica implícito na classe
+
+DIAGRAMA DE CLASSE
+
+<!--
+_____________________
+|    Nome_classe    |
+|___________________|
+|                   |
+|   - Atributos     |
+|___________________|
+|                   |
+|    - Métodos      |
+|___________________|
+-->
+
+Classes abstratas não podem ser instanciadas
+Criar superclasses sempre como abstratas
+
+Colocar protected na superclasse
+Manter private nas subclasses
+
+Métodos abstratos em superclasses, DEVEM ser implementados (deve ter corpo)
+Métodos não abstratos, podem ou não ser implementados
 

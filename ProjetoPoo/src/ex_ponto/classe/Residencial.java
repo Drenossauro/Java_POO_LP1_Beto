@@ -13,7 +13,7 @@ public class Residencial extends Construcao implements Contrato {
     } 
   
     public Residencial(
-      int num,
+      int num, 
       String nome,
       int qtoPortas,
       int qtoJanelas,

@@ -8,7 +8,7 @@ public abstract class Construcao {
     protected double valor; 
 
 
-    public double getFrente() {
+    public double getFrente() { 
         return this.frente;
     }
 
