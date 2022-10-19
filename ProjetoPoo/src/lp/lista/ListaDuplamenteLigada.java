@@ -1,6 +1,6 @@
 package ProjetoPoo.src.lp.lista;
 
-public class ListaLinear {
+public class ListaDuplamenteLigada {
 
     public static class Lista {
         public No inicio;// primeiro elementoda lista
@@ -13,6 +13,7 @@ public class ListaLinear {
     public static class No {
         public int info;
         public No prox;//armazenando o proximo endereço do elemento
+        public No anterior;
     }
 
     // ----------------------------------------------------------------------------------------------------------------------
@@ -22,7 +23,7 @@ public class ListaLinear {
         l = addInicio(l, 5);
         l = addInicio(l, 1);
         l = addFim(l, 2);
-        l = addFim(l, 3);
+        // l = addFimv2(l, 3);
         l = addInicio(l, 4);
         // 1 = addMeio(1,4);
         printLista(l);
@@ -43,16 +44,14 @@ public class ListaLinear {
 
         No n1 = new No();
         n1.info = val;
+        n1.prox = l.inicio;
+        l.inicio.anterior = n1;
+        l.inicio = n1;
 
         if(isEmpty(l)){
-            n1.prox = l.inicio;
-            l.inicio = n1;
             l.fim = n1;
-            return l;
         }
 
-        n1.prox = l.inicio;
-        l.inicio = n1;
         l.tam++;
         return l;
     }
@@ -115,10 +114,10 @@ public class ListaLinear {
 
     // ---------------------------------------------------------------------------------------------------------
     public static void printLista(Lista l) {
-        System.out.println("L -> ");
+        System.out.print("L -> ");
         No aux = l.inicio;
         while (aux != null) {
-            System.out.println(aux.info + " -> ");
+            System.out.print(aux.info + " -> ");
             aux = aux.prox;
         }
 
