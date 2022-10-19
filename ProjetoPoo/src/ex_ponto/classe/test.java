@@ -18,7 +18,7 @@ public class test {
         
         Comercial comercialElo = new Comercial();
         comercialElo.setValor(3000);
-        System.out.println("valor da casa: " + comercialElo.alterarValor());
+        System.out.println("valor da casa: " + comercialElo.alterarValor()); 
         System.out.println("valor do desconto: " + comercialElo.descontoVista());
 
         System.out.println(comercialElo.alterarValor());

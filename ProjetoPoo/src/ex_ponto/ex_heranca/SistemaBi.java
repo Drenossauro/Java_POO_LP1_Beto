@@ -36,7 +36,7 @@ public class SistemaBi {
     private static Scanner buffer = new Scanner(System.in);
  
     public static void main(String[] args) throws IOException {
-        int op = 1;
+        int op = 1; 
         while (op != 0) {
             printMenu();
             System.out.print("Digite Aqui: ");

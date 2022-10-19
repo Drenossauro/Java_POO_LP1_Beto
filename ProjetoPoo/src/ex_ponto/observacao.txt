@@ -22,31 +22,109 @@ Super classe
 
 
    vazio - agregação
-   
--   Modificadores de acesso (servem para diferenciar as permissões das implementações):
-    public (+) -> Aberto para todos (acesso às implementações públicas)
-    private (-) -> Visível apenas na própria classe
-    protected (#) ->
-    package (~) ->
 
-    -   só é um método se estiver dentro de uma classe, dentro do paradigma de orientação a objetos
+-Classes-
+  É um conjunto de objetos com características comuns. 
 
--   Os modificadores de acesso não podem ser usados em variáveis, mas podem ser usados em métodos.
+- A primeira letra da classe deve ser Maiuscula 
 
+public abstract class Pessoa {
+    protected String nome;
+    protected LocalDate dtNascimento;
+
+-Objetos-
+É um elemento de uma classe. 
+
+-Instância-
+Uma instância de uma classe é um novo objeto criado dessa classe, com o operador new. 
+Instanciar uma classe é criar um novo objeto do mesmo tipo dessa classe. 
+Uma classe somente poderá ser utilizada após ser instanciada.
+
+-Métodos-
+Os métodos representam os estados e ações dos objetos e classes.
 -   Funções em java são chamadas de MÉTODO
--   Atributos: fica dentro da classe
 
+-Variáveis-
+As variáveis e constantes representam as características dos objetos.
+- Atributos para qualificar objetos quando for construido
+-   Atributos: fica dentro da classe
 -   Atributos devem ser encapsulados
     -   somente a classe que é dona do atributo, pode modificar diretamente o valor
     -   os atributos não podem ser públicos
 
+-Packages-
+Classes - Objetos - Métodos e variáveis.
+
+-Interface-
+É a declaração de um conjunto de constantes e métodos sem qualquer implementação,
+usando a palavra implements. É o conjunto de requisições que um objeto pode atender.
+
+-Superclasse-
+abstract - Herança
+Todas as classes são criadas tendo outra como base. 
+A classe que gerou a outra é chamada de superclasse. 
+E fazemos referência à supercasse de uma classe usando a palavra extends. 
+A classe gerada é chamada de subclasse. Toda classe tem uma subclasse. 
+Quando não declaramos explicitamente a superclasse a super default é a object.
+
+Classes abstratas não podem ser instanciadas
+Criar superclasses sempre como abstratas
+
+Colocar protected na superclasse
+Manter private nas subclasses
+
+Métodos abstratos em superclasses, DEVEM ser implementados (deve ter corpo)
+Métodos não abstratos, podem ou não ser implementados
+
+-Construtores-
+E um metodo
+São usados para inicializar objetos. 
+É o método que tem o mesmo nome da sua classe. 
+Não pode ter um tipo de retorno e é chamado pelo operador new que aloca na memoria esse objeto.
 CONSTRUTOR é responsável por criar um objeto e alocar ele na memória
 
 -   o construtor é a primeira coisa a ser executadas
 
+-Polimorfismo-
+Reescrita
+É a capacidade de um método executar a ação adequada dependendo do tipo de objeto.
+Capacidade da classe filha modificar metodo herdado do pai.
+POLIMORFISMO: quando existe um método, que usamos e reescrevemos este método
+
+-Herança-
+Quando a subclasse herda as características da superclasse. 
+Denota especialização.
+
+-Encapsulamento-
+Proteger atributos de outras classes fora do ecossistema
+É o empacotamento (encapsulamento) de variáveis e métodos, ocultando a implementação do usuário.
+Representa reutilização, segurança e facilidade de manutenção.
+
+-   Modificadores de acesso (servem para diferenciar as permissões das implementações):
+    public (+) -> Aberto para todos (acesso às implementações públicas)
+    private (-) -> Visível apenas na própria classe
+    protected (#) -> apenas herdeiros podem vizualizar
+    package (~) -> (pacote) é um conjunto de classes,
+
+-   só é um método se estiver dentro de uma classe, dentro do paradigma de orientação a objetos
+
+-   Os modificadores de acesso não podem ser usados em variáveis, mas podem ser usados em métodos.
+
+-para acessar e modifiualos // GETTER AND SETTER-
+get : buscar ou pegar valor
+set : atribuir valor
+
+public String getNome() {
+    return this.nome;
+}
+
+public void setNome(String nome) {
+    this.nome = nome;
+}
+
+
 Model = modelo da aplicação, ou seja, classes que irão gerar objetos
 
-POLIMORFISMO: quando existe um método, que usamos e reescrevemos este método
 
 SOBRECARGA: acontece quando temos métodos com o mesmo nome e diferentes assinaturas
 
@@ -69,12 +147,25 @@ _____________________
 |___________________|
 -->
 
-Classes abstratas não podem ser instanciadas
-Criar superclasses sempre como abstratas
 
-Colocar protected na superclasse
-Manter private nas subclasses
+-collection
 
-Métodos abstratos em superclasses, DEVEM ser implementados (deve ter corpo)
-Métodos não abstratos, podem ou não ser implementados
+List<Autor> lista = new ArrayList<Autor>();
+
+        for (int i = 0; i < lista.size(); i++) {
+            System.out.println("Autor: " + lista.get(i).getNome());
+        }
+
+
+-static-
+compartilhado para todos da clsse ou seja vai poder usar em outraclasse
+
+-sacnner-
+fazer leitura pelo teclado
+
+-print- agregaçãoescrever na frente
+
+-next(); pegar o que foi digitado
+
+
 
