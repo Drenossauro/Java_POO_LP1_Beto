@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Colecao {
- 
+
     public static void main(String[] args) {
 
         List<Autor> lista = new ArrayList<Autor>();
