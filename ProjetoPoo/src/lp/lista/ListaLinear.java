@@ -8,7 +8,7 @@ public class ListaLinear {
         public No fim;
         public No fimv2;
     }
-
+ 
     // inner class
     public static class No {
         public int info;

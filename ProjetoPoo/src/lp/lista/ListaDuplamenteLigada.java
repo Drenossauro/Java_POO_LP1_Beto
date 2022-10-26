@@ -7,7 +7,7 @@ public class ListaDuplamenteLigada {
         public int tam;//tamanho da lista
         public No fim;
         public No fimv2;
-    }
+    } 
 
     // inner class
     public static class No {
