@@ -3,7 +3,7 @@ package ProjetoPoo.src.lp.ordenacao;
 import java.util.Random;
 
 public class BubbleSort {
-    private static final int TAM = 100;
+    private static final int TAM = 10;
 
   public static void main(String[] args) {
     int vetor[] = new int[TAM];
@@ -19,6 +19,7 @@ public class BubbleSort {
     boolean troca = false;
     int numComparacao = 0;
     do {
+      int x = 0;
       troca = false;
       for (int j = 0; j < vetor.length - 1; j++) {
         numComparacao++;

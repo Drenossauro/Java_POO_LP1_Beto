@@ -4,50 +4,51 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class InitOrdenacao {
-    
+
     public static void main(String[] args) {
-        
-        //Fazer a leitura pelo teclado
+
+        // Fazer a leitura pelo teclado
         Scanner in = new Scanner(System.in);
-        //classe nome_objeto = comando -contrutor da clsse (parametro para leitura)
-       
-        //Declaração dos vetores e matrizes JAVA
+        // classe nome_objeto = comando -contrutor da clsse (parametro para leitura)
+
+        // Declaração dos vetores e matrizes JAVA
         int vetor[] = new int[5];
-        int vetor2[] = {1, 2, 3, 4, 5, 6, 7, 8};
+
+        int vetor2[] = { 1, 2, 3, 4, 5, 6, 7, 8 };
+
         int matriz[][] = new int[3][3];
 
         // vetor[2] = 30;
         // vetor2[0] = 10;
         // matriz[0][0] = 1;
 
-
         // for (int i = 0; i < 5; i++) {
-        //     System.out.println(vetor[i]);
-            
+        // System.out.println(vetor[i]);
+
         // }
 
         // for(int i = 0; i < 5; i++) {
-        //     System.out.println("Digite o # " + (i + 1) + " = " + " número");
-        //     vetor[i] = in.nextInt();
+        // System.out.println("Digite o # " + (i + 1) + " = " + " número");
+        // vetor[i] = in.nextInt();
 
         // }
-//-----------------------------------------------------------------\\---------------------------------\\
-        // int num =  1 + ((int) (Math.random()) * 10);
+        // -----------------------------------------------------------------\\---------------------------------\\
+        // int num = 1 + ((int) (Math.random()) * 10);
 
-        //Random
+        // Random
 
         int min = 2, max = 10;
         Random rand = new Random();
         // System.out.println(rand.nextInt(max - min) + min);
-        
-        //ERRO
+
+        // ERRO
         // for (int i = 0; i < 5; i++) {
-            
+
         // System.out.println("vetor[" + i + "] = " + rand.nextInt(max - min) + min );
-            
+
         // }
 
-        //CERTO
+        // CERTO
 
         System.out.println("\nVetor: ");
         for (int i = 0; i < 5; i++) {
