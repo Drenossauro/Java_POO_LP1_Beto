@@ -30,6 +30,9 @@ public class Tree {
         }
 
     }
+    public boolean isNode(Node n){
+        return n != null;
+    }
 
     public void procurar(){}
 
@@ -39,8 +42,6 @@ public class Tree {
             return;
         }
 
-        
-
         System.out.println(node.info);
         if(node.esq != null)
             pre_ordem(node.esq);
@@ -48,10 +49,26 @@ public class Tree {
         if(node.dir != null)
             pre_ordem(node.dir);
 
+        // System.out.println(node.info);
+        // if(isNode(node.esq))
+        //     pre_ordem(node.esq);
+
+        // if(isNode(node.dir))
+        //     pre_ordem(node.dir);
+
 
     }
 
-    public void in_ordem(){}
+    public void in_ordem(Node node){
+        if(node == null) {
+            System.out.println("Árvore Vazia");
+            return;
+        }
+        
+
+
+
+    }
 
     public void pos_ordem(){}
 
