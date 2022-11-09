@@ -1,4 +1,4 @@
-package ProjetoPoo.src.ex_ponto.interfacess;
+package ex_ponto.interfacess;
 
 // interfacee um contrato feito entre classes
 // interface são classes abstratas - todo os metodos

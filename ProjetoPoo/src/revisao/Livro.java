@@ -1,4 +1,4 @@
-package ProjetoPoo.src.revisao;
+package revisao;
 
 import java.time.format.DateTimeFormatter;
 import java.util.Scanner;

@@ -1,4 +1,4 @@
-package ProjetoPoo.src.ex_ponto.classe;
+package ex_ponto.classe;
 
 public abstract class Construcao {
     protected double frente;

@@ -1,4 +1,4 @@
-package ProjetoPoo.src.lp.ordenacao;
+package lp.ordenacao;
 
 import java.io.IOException;
 

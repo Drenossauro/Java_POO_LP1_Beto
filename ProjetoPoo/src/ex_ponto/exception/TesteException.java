@@ -1,4 +1,4 @@
-package ProjetoPoo.src.ex_ponto.exception;
+package ex_ponto.exception;
 
 public class TesteException {
     public static void main(String[] args) {

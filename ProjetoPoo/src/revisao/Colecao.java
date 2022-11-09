@@ -1,4 +1,4 @@
-package ProjetoPoo.src.revisao;
+package revisao;
 
 import java.util.ArrayList;
 import java.util.List;

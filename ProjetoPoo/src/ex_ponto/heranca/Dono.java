@@ -1,4 +1,4 @@
-package ProjetoPoo.src.ex_ponto.heranca;
+package ex_ponto.heranca;
 
 public class Dono extends Pessoa {
     AnimalTerrestre animal;

@@ -1,4 +1,4 @@
-package ProjetoPoo.src.ex_ponto.ex_heranca;
+package ex_ponto.ex_heranca;
 
 import java.time.LocalDate;
 

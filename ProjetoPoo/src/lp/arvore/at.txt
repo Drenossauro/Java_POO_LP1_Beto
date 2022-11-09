@@ -20,3 +20,5 @@ saida03: 3 6 + 4 1 - * 5 +
 percorre sae, percorre sad, trata raiz.
 ex:dbefca
 
+ABB grau MAX = 2
+

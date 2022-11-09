@@ -1,4 +1,4 @@
-package ProjetoPoo.src.lp.lista;
+package lp.lista;
 
 public class ListaDuplamenteLigada {
 

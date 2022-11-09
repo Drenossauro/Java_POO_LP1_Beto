@@ -1,4 +1,4 @@
-package ProjetoPoo.src.lp.ponto;
+package lp.ponto;
 
 public class XeY_ponto {
     //Atributos

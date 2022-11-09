@@ -1,4 +1,4 @@
-package ProjetoPoo.src.ex_ponto.ex_cinema;
+package ex_ponto.ex_cinema;
 
 import java.time.LocalDate;
 

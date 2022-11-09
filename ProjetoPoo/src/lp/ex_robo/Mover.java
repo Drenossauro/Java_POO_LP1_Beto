@@ -1,4 +1,4 @@
-package ProjetoPoo.src.lp.ex_robo;
+package lp.ex_robo;
 
 import java.io.IOException;
 import java.util.Scanner;

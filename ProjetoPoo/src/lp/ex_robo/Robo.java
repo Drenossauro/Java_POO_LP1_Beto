@@ -1,4 +1,4 @@
-package ProjetoPoo.src.lp.ex_robo;
+package lp.ex_robo;
 
 public class Robo {
     private int x;

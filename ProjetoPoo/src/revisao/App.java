@@ -1,4 +1,4 @@
-package ProjetoPoo.src.revisao;
+package revisao;
 
 import java.time.LocalDate;
 import java.util.Scanner;

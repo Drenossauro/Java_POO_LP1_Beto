@@ -1,4 +1,4 @@
-package ProjetoPoo.src.ex_ponto.classe;
+package ex_ponto.classe;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package ProjetoPoo.src.ex_ponto.interfacess;
+package ex_ponto.interfacess;
 
 public class Triangulo implements FiguraGeometrica {
 // metodos   
