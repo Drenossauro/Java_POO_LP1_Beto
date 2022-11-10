@@ -22,3 +22,5 @@ ex:dbefca
 
 ABB grau MAX = 2
 
+Usar recursao fora foundd
+passar como parametro
