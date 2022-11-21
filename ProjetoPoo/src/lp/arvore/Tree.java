@@ -7,16 +7,17 @@ public class Tree {
     public void inserir(int info, Node node) {
         if (node == null) {
             root = new Node(info);
-            System.out.println("Criando arvore...!\nroot = " + root.info);
+            // System.out.println("Criando arvore...!\nroot = " + root.info);
             return;
         }
-        if (root.info > info) {
+        if (node.info > info) {
             // inserir a esquerda
             if (node.esq == null) {
                 node.esq = new Node(info);
                 return;
             }
-
+ 
+            // func. recursive
             inserir(info, node.esq);
 
         } else {
@@ -32,11 +33,40 @@ public class Tree {
 
     }
 
+    public void remover(Node node, Node previousNode, int info) {
+        if (node.info == info) {
+            if (node.esq != null) {
+                node.esq.dir = node.dir;
+                previousNode.dir = node.esq;
+            } else {
+                if (node.dir != null) {
+                    previousNode = node.esq;
+
+                    previousNode.dir = node.dir;
+                    previousNode.esq = null;
+                }
+
+            }
+        } else {
+            if (node.esq != null) {
+                remover(node.esq, node, info);
+            } else {
+                if (node.dir != null) {
+                    remover(node.dir, node, info);
+                } else {
+                    System.out.println("Nó não encontrado");
+                }
+            }
+        }
+
+    }
+
     public boolean isNode(Node n) {
         return n != null;
     }
 
-    public boolean procurar(Node node, int valor) {
+    public boolean procurar(Node node, int valor, boolean found) {
+        boolean retorno = found;
         // procurar pelo elemento na arvore
         // quando achar, imprimir se tem filhos e quais são seus filhos
         if (node == null) {
@@ -55,9 +85,10 @@ public class Tree {
                 qto++;
                 fDir = node.dir.info;
             }
-            System.out.printf(" O elemento" +
+            System.out.printf("O elemento " +
                     node.info + " tem " +
                     qto + " filhos\n");
+
             if (fEsq != 0)
                 System.out.println("Filho a esquerda: " + fEsq);
             if (fDir != 0)
@@ -67,12 +98,12 @@ public class Tree {
         }
 
         if (node.esq != null)
-            procurar(node.esq, valor);
+            retorno = procurar(node.esq, valor, retorno);
 
         if (node.dir != null)
-            procurar(node.dir, valor);
+            retorno = procurar(node.dir, valor, retorno);
 
-        return false;
+        return retorno;
 
     }
 
