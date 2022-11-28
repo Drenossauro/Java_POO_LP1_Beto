@@ -6,4 +6,13 @@ CREATE TABLE
         status int,
         token double,
         primary key(id));
-    );
+
+    CREATE TABLE
+    tb_carro(
+        id int not null auto_increment,
+		username varchar(255),
+        password varchar(255),
+        status int,
+        token double,
+        primary key(id));
+    

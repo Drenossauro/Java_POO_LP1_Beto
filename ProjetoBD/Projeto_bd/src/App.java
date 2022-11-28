@@ -5,7 +5,7 @@ public class App {
         ConnectionFactory.createConnection();
 
         User beto = new User();
-
+ 
         beto.setUsername("beto");
         beto.setPassword("admin");
         beto.setStatus(1);

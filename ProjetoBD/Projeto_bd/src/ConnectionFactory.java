@@ -8,8 +8,8 @@ public class ConnectionFactory {
 
         String url = "jdbc:mysql://localhost:3306/auladb";
         String user = "root";
-        String password = "";
-
+        String password = "ifms";
+ 
         try {
             // carregar driver do mysql
             Class.forName("com.mysql.cj.jdbc.Driver");
