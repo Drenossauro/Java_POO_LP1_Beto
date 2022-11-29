@@ -1,6 +1,9 @@
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class UserRepository {
     // DAO = DATA ACCESS OBJETC => Antigamente
@@ -12,7 +15,6 @@ public class UserRepository {
 
     private Connection conn = null;
  
-
     public UserRepository(){
         //nao tratar exeções no construtor
         this.conn = ConnectionFactory.createConnection();
@@ -42,7 +44,44 @@ public class UserRepository {
         }
     }
 
-    public void selectAll(){
+
+    public User getOne(int id){
+        String sql = "SELECT * FROM tb_user WHERE id = ?";
+        return null;
+    }
+    //fazer hojee
+
+    public List <User> selectAll(){
+        String sql = "SELECT * FROM tb_user";
+
+        List<User> users = new ArrayList<User>();
+
+        try {
+            PreparedStatement ps = this.conn.prepareStatement(sql);
+
+            ResultSet rs = ps.executeQuery();//retorna um conjunto resultados - varios
+
+            while(rs.next()){ //buscar
+                User u = new User();
+                u.setId(rs.getInt("id"));
+                u.setUsername(rs.getString("username"));
+                u.setPassword(rs.getString("password"));
+                u.setToken(rs.getDouble("token"));
+                System.out.println(
+                    rs.getInt(1) + " - " + 
+                    rs.getString("username") + " - " + 
+                    rs.getString("password"));
+            }
+
+            System.out.println(rs);
+
+        } catch (SQLException e) {
+            System.out.println("Erro: Não foi possivel buscar os usuários");
+            e.printStackTrace();
+        }
+         
+        return users;
+
 
     }
 

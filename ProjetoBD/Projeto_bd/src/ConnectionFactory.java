@@ -8,7 +8,7 @@ public class ConnectionFactory {
 
         String url = "jdbc:mysql://localhost:3306/auladb";
         String user = "root";
-        String password = "ifms";
+        String password = "";
  
         try {
             // carregar driver do mysql
