@@ -5,6 +5,8 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.mysql.cj.protocol.Resultset;
+
 public class UserRepository {
     // DAO = DATA ACCESS OBJETC => Antigamente
     // DAO => CRUD =>
@@ -45,8 +47,28 @@ public class UserRepository {
     }
 
 
-    public User getOne(int id){
+    public User getOne(int id) {
         String sql = "SELECT * FROM tb_user WHERE id = ?";
+        User u = new User();
+
+        try {
+            PreparedStatement ps = conn.prepareStatement(sql);
+            ps.setInt(1, id);
+            ResultSet rs = ps.executeQuery();
+
+            while (rs.next()) { // buscar
+                u.setId(rs.getInt("id"));
+                u.setUsername(rs.getString("username"));
+                u.setPassword(rs.getString("password"));
+                u.setStatus(rs.getInt("status"));
+                u.setToken(rs.getDouble("token"));
+            }
+            return u;
+            
+        } catch (SQLException ps) {
+            System.out.println("Erro:");
+        }
+
         return null;
     }
     //fazer hojee
@@ -89,8 +111,24 @@ public class UserRepository {
 
     }
 
-    public void delete(User _user){
+    public boolean delete(int id){
 
+        String sql = "DELETE FROM tb_user WHERE id = ?";
+        // String sql = "UPDAte set tb_user FROM tb_user WHERE id = ?";
+
+        try {
+        PreparedStatement ps = conn.prepareStatement(sql);
+        ps.setInt(1, id);
+
+        ps.executeUpdate();
+        return true;
+
+        } catch (Exception e) {
+            System.out.println("Erro: Não foi possivel buscar/deletar os usuario!!!");
+            e.printStackTrace();
+        }
+
+        return false;
     }
 
 

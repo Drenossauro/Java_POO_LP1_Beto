@@ -46,4 +46,12 @@ public class User {
         this.token = token;
     }
 
+    @Override
+    public String toString() {
+        return "( id = " + id 
+                + " Username = " + username 
+                + " status  = " + status 
+                + " token = " + token + " )";
+    }
+
 }
