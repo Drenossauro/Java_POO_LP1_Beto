@@ -10,7 +10,7 @@ public class Carro {
     public int getId() {
         return this.id;
     }
-
+ 
     public void setId(int id) {
         this.id = id;
     }
@@ -39,4 +39,11 @@ public class Carro {
         this.valor = valor;
     }
 
+    @Override
+    public String toString() {
+        return "( id = " + id
+                + " Nome = " + name
+                + " Data de Fabricação = " + dt_fabricacao
+                + " Valor = " + valor + ")";
+    }
 }

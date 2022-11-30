@@ -4,7 +4,7 @@ public class Produto {
     private String marcaProduto;
     private float precoProduto;
     private String categoria;
-
+ 
     public int getId() {
         return this.id;
     }
@@ -45,5 +45,13 @@ public class Produto {
         this.categoria = categoria;
     }
 
+    @Override
+    public String toString() {
+        return "( id = " + id
+                + " Nome = " + nomeProduto
+                + " Marca = " + marcaProduto 
+                + " Preço = " + precoProduto
+                + " Categoria = " + categoria + ")";
+    }
     
 }

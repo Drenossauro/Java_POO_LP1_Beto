@@ -36,11 +36,8 @@ public class UserRepository {
             //insert,update e delete
             ps.executeUpdate();
             
-
-
         } catch (SQLException e) {
             // TODO Auto-generated catch block
-
             System.out.println("Error: Não foi possivel inserir o usuário");
             e.printStackTrace();
         }
