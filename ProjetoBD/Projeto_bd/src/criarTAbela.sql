@@ -24,3 +24,4 @@ CREATE TABLE
         valor double,
         primary key(id));
     
+    

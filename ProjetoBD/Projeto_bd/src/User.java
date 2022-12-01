@@ -51,7 +51,7 @@ public class User {
         return "( id = " + id 
                 + " Username = " + username 
                 + " status  = " + status 
-                + " token = " + token + " )";
+                + " token = " + token + " )\n\n";
     }
 
 }
