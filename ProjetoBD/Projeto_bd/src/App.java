@@ -1,4 +1,4 @@
-import java.util.List;
+// import java.util.List;
 
 public class App {
     public static void main(String[] args) {
@@ -10,6 +10,11 @@ public class App {
         // chamar um metodo static
         // ConnectionFactory.createConnection();
 
+
+        // ----------------------------------------------------------------------------------
+        // SALVAR UM USUARIO
+        // ----------------------------------------------------------------------------------
+
         // User vitor = new User();
 
         // vitor.setUsername("eduardo");
@@ -17,34 +22,44 @@ public class App {
         // vitor.setStatus(1);
         // vitor.setToken(3.1415);
 
-        // ----------------------------------------------------------------------------------
-        // SALVAR UM USUARIO
-        // userRepository.save(vitor);
-
-
 
         // salvar o obj do tipo user noBD
+        // userRepository.save(vitor);
+        // ----------------------------------------------------------------------------------
+
+
+
         // UserRepository userRepository = new UserRepository();
         // userRepository.selectAll();
         // UserRepository userRepository = new UserRepository();
+        
+        // ----------------------------------------------------------------------------------
+        //BUSCAR TODOS OS USUARIOS
+        // ----------------------------------------------------------------------------------
+        // List <User> activeUsers = userRepository.getActiveUsers();
+        // for (User u : activeUsers)
+        // System.out.println(u);
 
-        //BUSCAR TODOS OS USUARIOS-----------------------------------------------------------
-        // List<User> usuarios = userRepository.selectAll();
-        // for (User u : usuarios) {
-        //     System.out.println(u);
-        // }
-
-        //buscar um unico usuario pelo id ---------------------------------------------------
+        //BUSCAR UM UNICO USUARIO PELO ID
         // User loc = userRepository.getOne(2);
-        // if(loc != null){
+
+        // if(loc.getUsername() != null){
         //     System.out.println("Usuario encontrado!\n" + loc);
         // }else{
-        //     System.out.println("Usuario encontrado!");
+        //     System.out.println("Usuario não encontrado!");
         // }
 
-        List <User> activeUsers = userRepository.getActiveUsers();
-        for (User u : activeUsers)
-        System.out.println(u);
+        // ----------------------------------------------------------------------------------
+
+        // ----------------------------------------------------------------------------------
+        // DELETAR P USUARIO PELO ID /OBJ
+        // ----------------------------------------------------------------------------------
+        // if(userRepository.delete(1)){
+        //     System.out.println("Usuário deletado!");
+        // } else {
+        //     System.out.println("Não foi possível deletar o usuário!");
+        // }
+        
 
 
     }
