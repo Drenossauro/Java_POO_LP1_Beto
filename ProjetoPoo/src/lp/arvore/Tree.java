@@ -3,7 +3,7 @@ package lp.arvore;
 public class Tree {
 
     Node root = null;
-
+ 
     public void inserir(int info, Node node) {
         if (node == null) {
             root = new Node(info);

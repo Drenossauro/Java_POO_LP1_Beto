@@ -9,6 +9,6 @@ public class Node{
         this.info = info;
         this.dir = null;
         this.esq = null;
-    }
+    } 
 
 } 

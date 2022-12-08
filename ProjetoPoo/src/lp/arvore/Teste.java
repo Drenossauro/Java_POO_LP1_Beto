@@ -8,7 +8,7 @@ public class Teste {
     testTree.inserir(10, testTree.root);
     testTree.inserir(11, testTree.root);
     testTree.inserir(16, testTree.root);
-    testTree.inserir(15, testTree.root);
+    testTree.inserir(15, testTree.root); 
     testTree.inserir(17, testTree.root);
     // testTree.inserir(9, testTree.root);
     // testTree.inserir(5, testTree.root);
@@ -27,7 +27,7 @@ public class Teste {
     // System.out.println("Elemento não encontrado");
     // if(!testTree.remover(testTree.root, 16, false))
     // System.out.println("Elemento não encontrado");
-    testTree.remover(testTree.root, null, 16);
+    testTree.remover(testTree.root, null, 17);
 
     System.out.println(testTree);
   }

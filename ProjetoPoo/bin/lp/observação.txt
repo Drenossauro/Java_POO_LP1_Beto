@@ -1,0 +1,4 @@
+MArgesort
+bubblesort
+sellect
+Insertion Sort
